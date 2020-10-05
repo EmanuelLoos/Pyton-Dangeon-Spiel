@@ -2,7 +2,7 @@
 import random
 eg=("Mmh...","Mhh...","Schmatz...","Mampf...")
 lg=("Lecker!","Das war aber gut!")
-kg=("Du Opfer!","Du Lappen","Du Lauch","Hahaha du schwächling","Du bit richtig sclecht!","Du Hundesohn")
+kg=("Versuche es noch einmal!")
 #dungeon="..w..K.w.G...K.w.G..K..w..K..G.w.K.$..K.w.G.K.w.w.K.w.G.K.€.K.G.w.K..wKG.K.G.K.€.G.K.G.K.w.G.K.G.K..€.G.K.G.K.w..K.G.w.K.w.$.w.K.w.G.K.p"
 dungeon1="""
 ############################################################################################################################
@@ -128,10 +128,10 @@ for d in (dungeon1,dungeon2,dungeon3,l):
 
 while True:
     if hero_hunger>38:
-       print("Du bist verhungert!\nVersager")
+       print("Du bist verhungert!")
        break
     if hero_hunger<-1:
-       print("Dein Bauch ist geplatzt!\nVersager")
+       print("Dein Bauch ist geplatzt!")
        break
     hero_hunger+=random.choice((0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2))
     #for x,c in enumerate(level):
@@ -174,7 +174,7 @@ while True:
             hero_Wurstsemmel-=1
             print(random.choice(eg)+"\n"+random.choice(lg))
         else:
-            print("Hilfe!!!\nkein essen mehr!!")
+            print("Hilfe!!!\nKein essen mehr!!")
     if command=="Zaubertrank":
         hero_hp+=100
     if command=="Schlüssel+":
@@ -197,7 +197,7 @@ while True:
     if target=="#":
         dx=0
         dy=0
-        print("Autch ich bin in eine Mauer gelaufen!\nIch werde von einem Trottel kontrolliert!!")
+        print("Autch ich bin in eine Mauer gelaufen!")
     #In Teleporter gelaufen---
     elif target=="*":
         #try to find legal field
@@ -236,7 +236,7 @@ while True:
         else:
             dx=0
             dy=0
-            print("Hife!\nIch bin gegen eine geslossene Tür ohne Schlüssel gelaufen!\nIch werde von einem Trottel kontrolliert!!")
+            print("Hife!\nIch bin gegen eine geslossene Tür ohne Schlüssel gelaufen!")
           
     #----In Spezialtüre gelaufen?----
     elif target=="s":
@@ -246,7 +246,7 @@ while True:
         else:
             dx=0
             dy=0
-            print("Hife!\nIch bin gegen eine geslossene Tür ohne Schlüssel gelaufen!\nIch werde von einem Trottel kontrolliert!!")
+            print("Hife!\nIch bin gegen eine geslossene Tür ohne Schlüssel gelaufen!")
           
     # in Monster gelaufen?
     #target=level[herox+dx]
@@ -258,7 +258,7 @@ while True:
         hero_hp-=schaden
         print("Du erleidest {} Schaden".format(schaden))
         if hero_hp<1:
-             print:("Du stirbst!\nVersager!")
+             print:("Du stirbst!")
              break
         sieg=0.333333
         if random.random() < sieg:
@@ -277,7 +277,7 @@ while True:
         hero_hp-=schaden
         print("Du erleidest {} Schaden".format(schaden))
         if hero_hp<1:
-             print:("Du stirbst!\nVersager!")
+             print:("Du stirbst!")
              break
         sieg=0.1
         if random.random() < sieg:
@@ -315,7 +315,7 @@ while True:
         hero_hp-=schaden
         print("Du erleidest {} Schaden".format(schaden))
         if hero_hp<1:
-             print:("Du stirbst!\nVersager!")
+             print:("Du stirbst!")
              break
         sieg=0.2
         if random.random() < sieg:
